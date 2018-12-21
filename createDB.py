@@ -105,6 +105,30 @@ def UserLogin(userName, password):
         print('Login granted...')
 
 #########################################################################################
+###   FUNCTION: addOwnershiptoAsset                                                   ###
+###   USE: Adding the owned Asset from UI     - Insert to asset and map table         ###
+###   RETURN: (phase1) ? 0: Asset_id                                                  ###
+#########################################################################################
+def addOwnershiptoAsset():
+    # Create the column for insertion -> 
+        # Asset table
+            # cat_id - Get from selected category
+            # asset_id (generate new id - A_n {n = 1,2,3,4 ....}).
+            # asset_name - Title of asset, Name of Asset - comes from UI.
+            # asset_author - Owner entered from UI - mandatory field.
+            # asset_company - Publisher, Manufacturer .. from UI - optional detail.
+            # Description - Other details
+        # Asset_user_mapping_table
+            # user_id - Pull from logged in user - UI
+            # asset_id - same as Asset_table->asset_id added above.
+            # isOwned - Y 
+            # isWished - N (default)
+            # Quoted value - User input (quote from user on product) from UI - A backend value use to show suggestions.
+    # Add ownership
+        # insert operation to mapping table with 
+    
+
+#########################################################################################
 ###   FUNCTION: main                                                                  ###
 ###   USE: Temp function to handle the complete flow                                  ###
 ###   RETURN: (phase1) ? 0: 0/1                                                       ###
